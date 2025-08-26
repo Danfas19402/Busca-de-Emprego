@@ -1,0 +1,61 @@
+<!Doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BUSCA DE EMPREGOS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1 class="logo">🔎 BUSCA DE EMPREGOS</h1>
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar modo claro/escuro">🌙</button>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="search-card">
+      <form id="searchForm" class="search-form">
+        <div class="field">
+          <label for="query">Cargo / Palavras</label>
+          <input id="query" name="query" type="search" placeholder="Ex: Desenvolvedor Front-end" />
+        </div>
+        <div class="field">
+          <label for="location">Localização</label>
+          <input id="location" name="location" type="text" placeholder="Ex: São Paulo, Remoto" />
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Buscar</button>
+          <button type="button" id="clearBtn" class="btn">Limpar</button>
+        </div>
+      </form>
+
+      <div class="quick-filters">
+        <button class="chip" data-filter="remoto">Remoto</button>
+        <button class="chip" data-filter="junior">Júnior</button>
+        <button class="chip" data-filter="pleno">Pleno</button>
+        <button class="chip" data-filter="senior">Sênior</button>
+      </div>
+
+      <div class="recent-searches" id="recentSearches" aria-live="polite"></div>
+    </section>
+
+    <section class="results" id="results">
+      <!-- Vagas aparecerão aqui -->
+    </section>
+
+    <nav class="pagination" id="pagination">
+      <!-- Paginação -->
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>Feito com ❤️ — Exemplo local sem backend. Salva buscas no armazenamento local.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
